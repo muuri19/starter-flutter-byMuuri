@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:starter_flutter/resources/app_resources.dart';
+import 'package:starter_flutter/utils/themes/theme.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,11 +11,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!', style: TextStyle(color: AppColors.background),),
-        ),
-      ),
+      darkTheme: XAppTheme.darkTheme,
+      theme: XAppTheme.lightTheme,
     );
   }
 }
